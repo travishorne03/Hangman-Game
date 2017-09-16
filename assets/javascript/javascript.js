@@ -85,7 +85,14 @@ function startGame()
 	//Populate blanks
 	for(var i = 0; i< numBlanks; i++)
 	{
-		blanksAndSuccesses.push('_');
+		if (choosenWord[i] === " ") {
+			blanksAndSuccesses.push("&nbsp;");
+
+		}else {
+			blanksAndSuccesses.push('_');
+
+		}
+		
 		document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses;
 	}
 
